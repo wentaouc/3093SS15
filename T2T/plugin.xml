@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="T2T"
+            id="T2T">
+      </category>
+      <view
+            name="Requirements"
+            icon="icons/sample.gif"
+            category="T2T"
+            class="edu.uc.rel.t2t.views.RequirementsView"
+            id="t2t.views.RequirementsView">
+      </view>
+      <view
+            category="T2T"
+            class="edu.uc.rel.t2t.views.MethodsView"
+            icon="icons/sample.gif"
+            id="t2t.views.MethodsView"
+            name="Methods"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.eclipse.jdt.ui.JavaPerspective">
+         <view
+               ratio="0.5"
+               relative="org.eclipse.ui.views.ProblemView"
+               relationship="right"
+               id="t2t.views.SampleView">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.help.contexts">
+      <contexts
+            file="contexts.xml">
+      </contexts>
+   </extension>
+
+</plugin>
