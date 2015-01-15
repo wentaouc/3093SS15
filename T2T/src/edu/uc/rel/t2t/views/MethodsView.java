@@ -39,7 +39,7 @@ public class MethodsView extends ViewPart implements ISelectionListener{
 parent.setLayout(new FormLayout());
 		//Create tagging label
 		Label tagLabel = new Label(parent,SWT.SINGLE);
-		tagLabel.setText("Tags:");
+		tagLabel.setText("Tagging:");
 		FormData fd = new FormData();
 		fd.top = new FormAttachment(0,10);
 		fd.left = new FormAttachment(0,10);
